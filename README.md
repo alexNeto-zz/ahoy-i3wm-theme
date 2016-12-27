@@ -1,7 +1,6 @@
 #my i3wm desktop config
 
-I still have to organize the script
-
+still working
 
 ## color set
 
