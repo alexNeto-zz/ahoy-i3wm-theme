@@ -82,7 +82,7 @@ bindsym $mod+t exec virtualbox
 # start nautilus
 bindsym $mod+n exec nautilus
 # set the shutcut to i3lock 'screensaver'
-bindsym $mod+x exec i3lock --color "$bg-color"
+bindsym $mod+x exec i3lock -b -i ~/Imagens/Ni.png #--color "$bg-color"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -239,4 +239,20 @@ exec --no-startup-id feh --bg-scale ~/Imagens/hussaria.jpg
 
 exec compton
 
+set $Locker i3lock -i ~/Imagens/Ni.png && sleep 1
 
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+ 	
+	bindsym Return mode "default"
+    	bindsym Escape mode "default"
+}
+
+bindsym $mod+Pause mode "$mode_system"
+ 
