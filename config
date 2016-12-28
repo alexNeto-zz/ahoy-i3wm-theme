@@ -75,6 +75,10 @@ bindsym $mod+Return exec gnome-terminal
 #i3-sensible-terminal
 # start firefox
 bindsym $mod+b exec firefox -private
+# start chrome
+bindsym $mod+c exec google-chrome
+# start virtualbox
+bindsym $mod+t exec virtualbox
 # start nautilus
 bindsym $mod+n exec nautilus
 # set the shutcut to i3lock 'screensaver'
