@@ -2,7 +2,11 @@
 
 MEM=$(df -h | grep /dev/m | cut -b39-40)
 SUFIX=$(df -h | grep /dev/m | cut -b41)
+<<<<<<< HEAD
 #MEMCOMP=$(echo $MEM | cut -b1,3)
+=======
+MEMCOMP=$(echo $MEM | cut -b1,3)
+>>>>>>> a54fb667d9492e3c024b2aaaa9d526609156112e
 
 if [ $SUFIX == "G" ]
 then 
@@ -16,9 +20,17 @@ then
 fi
 
 
+<<<<<<< HEAD
 if [ $MEM -lt 30 -o $SUFIX != "GiB" ]
 then
 	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
 else
 	echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
+=======
+if [ $MEMCOMP -gt 30 -o $SUFIX != "MiB" -o $SUFIX != "kiB" ]
+then
+	echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
+else
+	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
+>>>>>>> a54fb667d9492e3c024b2aaaa9d526609156112e
 fi
