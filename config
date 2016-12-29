@@ -84,7 +84,7 @@ bindsym $mod+n exec nautilus
 # start thunderbird
 bindsym $mod+t exec thunderbird
 # set the shutcut to i3lock 'screensaver'
-bindsym $mod+x exec i3lock -b -i ~/Imagens/Ni.png #--color "$bg-color"
+bindsym $mod+x exec i3lock -b -i ~/Imagens/ni.jpg #--color "$bg-color"
 
 # kill focused window
 bindsym $mod+Shift+q kill
