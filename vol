@@ -1,0 +1,15 @@
+#!/bin/bash
+
+VOL=$(amixer get Master | grep -Eo '[0-9][0-9]?%')
+VOLSHOW=$(echo $VOL | cut -b1-3)
+VOLCOMP=$(echo $VOL | cut -b1-2)
+
+if [ $VOLCOMP -eq 0 ]
+then
+	echo " $VOLSHOW"
+elif [ $VOLCOMP -gt 60 ]
+then
+	echo "<span color='#fc5050'> $VOLSHOW</span>"
+else 
+	echo " $VOLSHOW"
+fi

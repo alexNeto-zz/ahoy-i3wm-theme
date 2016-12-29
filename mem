@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MEM=$(free -h | grep Mem | cut -b28-30)
+
+MEMCOMP=$(echo $MEM | cut -b1,3)
+
+if [ $MEMCOMP -lt 50 ]
+then
+	echo "<span color='#2afc98'>   $MEM GiB </span>"
+else
+	echo "<span color='#fc5050'>   $MEM GiB </span>"
+fi
