@@ -2,7 +2,6 @@
 
 MEM=$(df -h | grep /dev/m | cut -b39-40)
 SUFIX=$(df -h | grep /dev/m | cut -b41)
-#MEMCOMP=$(echo $MEM | cut -b1,3)
 
 if [ $SUFIX == "G" ]
 then 
