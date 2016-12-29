@@ -1,12 +1,24 @@
 #!/bin/bash
 
 MEM=$(free -h | grep Mem | cut -b28-30)
-
+SUFIX=$(free -h | grep Mem | cut -b31)
 MEMCOMP=$(echo $MEM | cut -b1,3)
+
+if [ $SUFIX == "G" ]
+then 
+	SUFIX=GiB
+elif [ $SUFIX == "M" ]
+then 
+	SUFIX=MiB
+elif [ $SUFIX == "k" ]
+then
+	SUFIX=kiB
+fi
+
 
 if [ $MEMCOMP -lt 50 ]
 then
-	echo "<span color='#2afc98'>   $MEM GiB </span>"
+	echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
 else
-	echo "<span color='#fc5050'>   $MEM GiB </span>"
+	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
 fi
