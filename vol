@@ -1,15 +1,28 @@
-#!/bin/bash
+#!/bin/bash 
 
-VOL=$(amixer get Master | grep -Eo '[0-9][0-9]?%')
-VOLSHOW=$(echo $VOL | cut -b1-3)
-VOLCOMP=$(echo $VOL | cut -b1-2)
+VOL=$(amixer get Master | grep -Eo '[0-9][0-9][0-9]?%')
 
-if [ $VOLCOMP -eq 0 ]
-then
-	echo " $VOLSHOW"
-elif [ $VOLCOMP -gt 60 ]
+VOLSHOW=$(echo $VOL | cut -b1-4)
+VOLCOMP=$(echo $VOL | cut -b1-3)
+if [ $VOLCOMP -ge 100 ]
 then
 	echo "<span color='#fc5050'> $VOLSHOW</span>"
-else 
-	echo " $VOLSHOW"
+	amixer set Master 100%
+else
+	VOLSHOW=$(echo $VOL | cut -b1-3)
+	VOLCOMP=$(echo $VOL | cut -b1-2)
+	if [ $VOLCOMP -gt 80 ]
+	then
+		echo "<span color='#fc5050'> $VOLSHOW</span>"
+	elif [ $VOLCOMP -gt 60 -o $VOLCOMP -lt 80 ]
+	then
+		echo "<span color='#f7fc5d'> $VOLSHOW</span>"
+	elif [ $VOLCOMP -gt 0 -o $VOLCOMP -lt 61 ]
+	then
+		echo " $VOLSHOW"
+	else
+		VOLSHOW=$(echo $VOL | cut -b1-2)
+		VOLCOMP=$(echo $VOL | cut -b1)
+		echo "<span color='#2afc98'>  $VOLSHOW </span>" 
+	fi
 fi
