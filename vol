@@ -6,8 +6,12 @@ VOLSHOW=$(echo $VOL | cut -b1-4)
 VOLCOMP=$(echo $VOL | cut -b1-3)
 if [ $VOLCOMP -ge 100 ]
 then
+	if [ $VOLCOMP -gt 150 ]
+	then
+		echo "<span color='#fc5050'> $VOLSHOW</span>"
+		amixer set Master 150%
+	fi
 	echo "<span color='#fc5050'> $VOLSHOW</span>"
-	amixer set Master 100%
 else
 	VOLSHOW=$(echo $VOL | cut -b1-3)
 	VOLCOMP=$(echo $VOL | cut -b1-2)
