@@ -9,11 +9,20 @@ if [ $POWER -n  "off" ]
 then
 	if [ $SIG -lt 20 ]
 	then
-		echo "<span color='#fc5050'> </span>"
+		# dark theme
+		# echo "<span color='#fc5050'> </span>"
+		# light theme
+		echo "<span color='#772121'> </span>"
 	elif [ $SIG -gt 55 ]
 	then
-		echo "<span color='#2afc98'> </span>"
+		# dark theme
+		# echo "<span color='#2afc98'> </span>"
+		# light theme
+		echo "<span color='#21773a'> </span>"
 	else
-		echo "<span color='#f5fc2a'> </span>"
+		# dark theme
+		# echo "<span color='#f5fc2a'> </span>"
+		# light theme
+		echo "<span color='#8a8721'> </span>"
 	fi
 fi
