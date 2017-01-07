@@ -42,11 +42,11 @@ font pango: libre-franklin 7
 floating_modifier $mod
 
 # config colors
-set $bg-color 	         	#e8e9ed
-set $inactive-bg-color   	#eff0f4
-set $text-color          	#313a47
-set $inactive-text-color 	#717a87
-set $urgent-bg-color	 		#590004
+set $bg-color 	         	#2f343f
+set $inactive-bg-color   	#3d414c
+set $text-color          	#f5f6f7
+set $inactive-text-color 	#676e7d
+set $urgent-bg-color	 		#E53935
 
 # window colors
 #                      	 border              	background         text                 	indicator
@@ -95,7 +95,7 @@ bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -fn "libre-franklin 10" -nb "#e8e9ed" -nf "#313a47" -sb "#eff0f4" -sf "#b50009"
+bindsym $mod+d exec --no-startup-id dmenu_run -fn "libre-franklin 10" -nb "#2f343f" -nf "#f5f6f7" -sb "#3d414c" -sf "#2afc98"
 
 # change focus
 bindsym $mod+j focus left
