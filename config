@@ -1,37 +1,37 @@
-# System Config 
+# System Config
 # touchpad config
-# Enable Tapping 
-#  $:  xinput list to see the touchpad  
-#  $:  xinput list-props "name of the touchpad" to see the opt
-#  $:  xinput set-prop "name of the touchpad" "name of the service" 0 to disable or 1 to enable
+################################################################################
+#  $:  xinput list //to see the touchpad
+#  $:  xinput list-props "name of the touchpad" // to see the opt
+#  $:  xinput set-prop "name of the touchpad" "name of the service" 0 or 1
+################################################################################
+# Enable Tapping
 exec xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+# Enable natural scroll
 exec xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-
+# Cursor speed
+exec xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" 0.75
 # link: https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
 # Pulse Audio controls
 #increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 #decrease sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-# mute sound 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
-
+# mute sound
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # Sreen brightness controls
 # increase screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 # decrease screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
-
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 # Touchpad controls
 # toggle touchpad
-bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh 
-
+bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
 
 set $mod Mod4
 
@@ -40,6 +40,9 @@ font pango: libre-franklin 7
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
+# right click to togle float
+bindsym button3 floating toggle
+
 
 # config colors
 set $bg-color 	         	#e8e9ed
@@ -55,11 +58,11 @@ set $urgent-bg-color	 		#590004
  client.focused_inactive $inactive-bg-color 		$inactive-bg-color $inactive-text-color 	#a5a6a7
  client.urgent           $urgent-bg-color   		$urgent-bg-color   $text-color          	#a5a6a7
 
-# hide windows border 
+# hide windows border
 hide_edge_borders both
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec dbus-launch gnome-terminal
 # start firefox
 bindsym $mod+b exec firefox -private
 # start chrome
@@ -72,7 +75,7 @@ bindsym $mod+n exec nautilus
 bindsym $mod+t exec thunderbird
 
 # set Locker to i3lock and add a imagem
-set $Locker i3lock -i ~/Imagens/ni.png && sleep 1
+set $Locker i3lock -i ~/Imagens/Wallpapers/toc.png && sleep 1
 # set the shutcut to i3lock 'screensaver'
 bindsym $mod+x exec $Locker
 
@@ -83,8 +86,8 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
- 	
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
@@ -149,7 +152,7 @@ bindsym $mod+a focus parent
 
 #Workspaces' name var
 
-set $ws1 "1 :  " 
+set $ws1 "1 :  "
 set $ws2 "2 :  "
 set $ws3 "3 :  "
 set $ws4 "4 :  "
@@ -231,12 +234,8 @@ bar {
 	}
 }
 
-# sets the background 
-exec --no-startup-id feh --bg-scale ~/Imagens/hussaria.jpg
+# sets the background
+exec --no-startup-id feh --bg-scale ~/Imagens/Wallpapers/hussaria.jpg
 
 # enable transparency
 exec compton
-
-
-
- 
