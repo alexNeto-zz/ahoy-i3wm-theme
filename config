@@ -155,6 +155,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # resize windows
 bindsym $mod+r mode "resize"
+#Screenshots
+bindsym Print exec scrot -m "$HOME/Imagens/%s_%H%M_%d.%m.%Y.png"
+bindsym Shift+Print exec scrot -s "$HOME/Imagens/%s_%H%M_%d%m%Y.png"
+bindsym $mod+Shift+Print exec scrot -u -d 4 "$HOME/Imagens/%s_%H%M_%d%m%Y.png"
 ##############
 # workspaces #
 ##############
@@ -202,7 +206,7 @@ bar {
 	  separator	 $inactiveBgColor
 		#                  border           background       text
 		focused_workspace  $bgColor         $bgColor         $textColor
-		inactive_workspace $inactiveBgColor $inactiveBgColor $inactiveTextColor
+		inactive_workspace $bgColor         $bgColor         $inactiveTextColor
 		urgent_workspace   $urgentBgColor   $urgentBgColor   $textColor
 	}
 }
