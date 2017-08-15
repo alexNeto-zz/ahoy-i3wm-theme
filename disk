@@ -4,10 +4,10 @@ MEM=$(df -h | grep /dev/sda1 | cut -b29-31)
 SUFIX=$(df -h | grep /dev/sda1 | cut -b32)
 
 if [ $SUFIX == "G" ]
-then 
+then
 	SUFIX=GiB
 elif [ $SUFIX == "M" ]
-then 
+then
 	SUFIX=MiB
 elif [ $SUFIX == "k" ]
 then
@@ -16,13 +16,7 @@ fi
 
 if [ $MEM -lt 30 -o $SUFIX != "GiB" ]
 then
-	# dark theme
-	# echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
-	# light theme
-	echo "<span color='#772121'>   $MEM $SUFIX  </span>"
+	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
 else
-	# dark theme
-	# echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
-	# light theme
-	echo "<span color='#21773a'>   $MEM $SUFIX  </span>"
+	echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
 fi
