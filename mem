@@ -5,10 +5,10 @@ SUFIX=$(free -h | grep Mem | cut -b31)
 MEMCOMP=$(echo $MEM | cut -b1,3)
 
 if [ $SUFIX == "G" ]
-then 
+then
 	SUFIX=GiB
 elif [ $SUFIX == "M" ]
-then 
+then
 	SUFIX=MiB
 elif [ $SUFIX == "k" ]
 then
@@ -18,13 +18,7 @@ fi
 
 if [ $MEMCOMP -lt 50 -o $SUFIX != "GiB" ]
 then
-	# dark theme
-	# echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
-	# light theme
-	echo "<span color='#21773a'>   $MEM $SUFIX  </span>"
+	echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
 else
-	# dark theme
-	# echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
-	# light theme
-	echo "<span color='#772121'>   $MEM $SUFIX  </span>"
+	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
 fi

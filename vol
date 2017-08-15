@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 VOL=$(amixer get Master | grep -Eo '[0-9][0-9][0-9]?%')
 
@@ -8,40 +8,25 @@ if [ $VOLCOMP -ge 100 ]
 then
 	if [ $VOLCOMP -gt 150 ]
 	then
-		# dark theme
-		# echo "<span color='#fc5050'> $VOLSHOW</span>"
-		# light theme
-		echo "<span color='#772121'> $VOLSHOW</span>"
+		echo "<span color='#fc5050'> $VOLSHOW</span>"
 		amixer set Master 150%
 	fi
-	# dark theme
-	# echo "<span color='#fc5050'> $VOLSHOW</span>"
-	# light theme
-	echo "<span color='#772121'> $VOLSHOW</span>"
+	echo "<span color='#fc5050'> $VOLSHOW</span>"
 else
 	VOLSHOW=$(echo $VOL | cut -b1-3)
 	VOLCOMP=$(echo $VOL | cut -b1-2)
 	if [ $VOLCOMP -ge 80 ]
 	then
-		# dark theme
-		# echo "<span color='#fc5050'> $VOLSHOW</span>"
-		# light theme
-		echo "<span color='#772121'> $VOLSHOW</span>"
+		echo "<span color='#fc5050'> $VOLSHOW</span>"
 	elif [ $VOLCOMP -gt 60 -a $VOLCOMP -lt 80 ]
 	then
-		# dark theme
-		# echo "<span color='#f7fc5d'> $VOLSHOW</span>"
-		# light theme
-		echo "<span color='#8a8721'> $VOLSHOW</span>"
+		echo "<span color='#f7fc5d'> $VOLSHOW</span>"
 	elif [ $VOLCOMP -gt 0 -a $VOLCOMP -lt 61 ]
 	then
 		echo " $VOLSHOW"
 	else
 		VOLSHOW=$(echo $VOL | cut -b1-2)
 		VOLCOMP=$(echo $VOL | cut -b1)
-		# dark theme
-		# echo "<span color='#2afc98'>  $VOLSHOW </span>" 
-		# light theme
-		echo "<span color='#21773a'>  $VOLSHOW </span>" 
+		echo "<span color='#2afc98'>  $VOLSHOW </span>"
 	fi
 fi
