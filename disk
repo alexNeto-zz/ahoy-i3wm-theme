@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MEM=$(df -h | grep /dev/m | cut -b39-40)
-SUFIX=$(df -h | grep /dev/m | cut -b41)
+MEM=$(df -h | grep /dev/sda1 | cut -b29-31)
+SUFIX=$(df -h | grep /dev/sda1 | cut -b32)
 
 if [ $SUFIX == "G" ]
 then 

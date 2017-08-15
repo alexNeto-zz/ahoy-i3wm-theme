@@ -32,7 +32,8 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
+#disable pc speaker
+exec rmmod pcspkr
 set $mod Mod4
 
 # Font for window titles
@@ -52,8 +53,8 @@ set $inactive-text-color 	#717a87
 set $urgent-bg-color	 		#590004
 
 # window colors
-#                      	 border              	background         text                 	indicator
- client.focused          $bg-color           	$bg-color          $text-color         	#a5a6a7
+#                      	 border              	background         text                 	 indicator
+ client.focused          $bg-color           	  $bg-color          $text-color         	  #a5a6a7
  client.unfocused        $inactive-bg-color 		$inactive-bg-color $inactive-text-color 	#a5a6a7
  client.focused_inactive $inactive-bg-color 		$inactive-bg-color $inactive-text-color 	#a5a6a7
  client.urgent           $urgent-bg-color   		$urgent-bg-color   $text-color          	#a5a6a7
@@ -66,7 +67,7 @@ bindsym $mod+Return exec dbus-launch gnome-terminal
 # start firefox
 bindsym $mod+b exec firefox -private
 # start chrome
-bindsym $mod+c exec google-chrome
+bindsym $mod+c exec chromium
 # start virtualbox
 bindsym $mod+y exec virtualbox
 # start nautilus
@@ -224,6 +225,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+  position top
 	colors {
 		background $bg-color
 	    	separator	 	#a5a6a7
