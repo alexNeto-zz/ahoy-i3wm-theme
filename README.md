@@ -20,12 +20,12 @@ Used for incons in the bar
  ### i3blocks
  Used instead of i3bar
  1. Install it
-    * `# pacman -S i3blocks` for Arch linux based
+    * `# pacman -S i3blocks` for Arch linux based
     * `# apt-get install i3blocks` for Debian GNU/Linux based
  ### feh
  Used to set a wallpaper
  1. Install it
-    * `# pacman -S feh` for Arch linux based
+    * `# pacman -S feh` for Arch linux based
     * `# apt-get install feh` for Debian GNU/Linux based
  ### compton
  Allow transparency and effects
@@ -60,7 +60,7 @@ Command | Effect
  **$mod + k** |
  **$mod + l** |
  **$mod + m** |
- **$mod + n** | start nautilus
+ **$mod + n** | start thunar
  **$mod + o** | put a normal border
  **$mod + p** |
  **$mod + q** |
@@ -125,26 +125,26 @@ Command | Effect
  **$mod + Ctrl + x** |
  **$mod + Ctrl + y** |
  **$mod + Ctrl + z** |
- **$mod + 1** |
- **$mod + 2** |
- **$mod + 3** |
- **$mod + 4** |
- **$mod + 5** |
- **$mod + 6** |
- **$mod + 7** |
- **$mod + 8** |
- **$mod + 9** |
- **$mod + 0** |
- **$mod + Shift + 1** |
- **$mod + Shift + 2** |
- **$mod + Shift + 3** |
- **$mod + Shift + 4** |
- **$mod + Shift + 5** |
- **$mod + Shift + 6** |
- **$mod + Shift + 7** |
- **$mod + Shift + 8** |
- **$mod + Shift + 9** |
- **$mod + Shift + 0** |
+ **$mod + 1** | go to desktop 1
+ **$mod + 2** | go to desktop 2
+ **$mod + 3** | go to desktop 3
+ **$mod + 4** | go to desktop 4
+ **$mod + 5** | go to desktop 5
+ **$mod + 6** | go to desktop 6
+ **$mod + 7** | go to desktop 7
+ **$mod + 8** | go to desktop 8
+ **$mod + 9** | go to desktop 9
+ **$mod + 0** | go to desktop 10
+ **$mod + Shift + 1** | move to desktop 1
+ **$mod + Shift + 2** | move to desktop 2
+ **$mod + Shift + 3** | move to desktop 3
+ **$mod + Shift + 4** | move to desktop 4
+ **$mod + Shift + 5** | move to desktop 5
+ **$mod + Shift + 6** | move to desktop 6
+ **$mod + Shift + 7** | move to desktop 7
+ **$mod + Shift + 8** | move to desktop 8
+ **$mod + Shift + 9** | move to desktop 9
+ **$mod + Shift + 0** | move to desktop 10
  **$mod + Pause** | open a menu to to logout, end session, restart or poweroff
  **$mod + Space** | change focus between tiling / floating windows
  **$mod + Shift + Space** | toggle tiling / floating
