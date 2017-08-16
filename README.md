@@ -32,6 +32,11 @@ Used for incons in the bar
  1. Install it
     * `# pacman -S compton` for Arch linux based
     * `# apt-get install compton` for Debian GNU/Linux based
+### GTK theme
+I'm using [vimix theme](https://github.com/vinceliuice/vimix-gtk-themes)
+Use lxappearance to tweak the theme and font 
+   * `# pacman -S lxappareance` for Arch linux based
+   * `# apt-get install lxappareance` for Debian GNU/Linux based
 
 ## Using it
 just put the content of the i3 folder in the i3 config file. It can be in `~/.config/i3/` or `~/.i3/`.
