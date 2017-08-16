@@ -58,7 +58,7 @@ set $mod Mod4
 # hide windows border
 hide_edge_borders horizontal # vertical, smart, both
 # hide title bar
-new_window none
+new_window pixel 1
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 # right click to togle float
