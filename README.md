@@ -32,4 +32,8 @@ Used for incons in the bar
     * `# pacman -S compton` for Arch linux based
     * `# apt-get install compton` for Debian GNU/Linux based
  
-    
+## Using it
+just put the content of the i3 folder in the i3 config file. It can be in `~/.config/i3/` or `~/.i3/`.
+I'm using the gnome-terminal, if you use other, change the name in the config file.
+> I strongly recommend to rename the standard i3 to old_i3 and have a terminal open. Just in case something goes wrong.
+Change the wallpaper and enjoy
