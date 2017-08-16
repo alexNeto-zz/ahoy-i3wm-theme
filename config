@@ -34,6 +34,8 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+# execute a networkManager applet
+exec --no-startup-id nm-applet
 #################
 # config colors #
 #################
@@ -56,7 +58,7 @@ font pango: Muli 8
 #mod4 for windows key, mod1 fot alt key
 set $mod Mod4
 # hide windows border
-hide_edge_borders horizontal # vertical, smart, both
+hide_edge_borders smart # horizontal vertical, smart, both
 # hide title bar
 new_window pixel 1
 # Use Mouse+$mod to drag floating windows
@@ -133,6 +135,12 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 # split in vertical orientation
 bindsym $mod+v split v
+# none border
+bindsym $mod+u border none
+# put 1 pixel border
+bindsym $mod+i border pixel 1
+# put a normal border
+bindsym $mod+o border normal
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
@@ -155,6 +163,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # resize windows
 bindsym $mod+r mode "resize"
+bindsym $mod+Shift+t sticky toggle
 #Screenshots
 bindsym Print exec scrot -m "$HOME/Imagens/%s_%H%M_%d.%m.%Y.png"
 bindsym Shift+Print exec scrot -s "$HOME/Imagens/%s_%H%M_%d%m%Y.png"

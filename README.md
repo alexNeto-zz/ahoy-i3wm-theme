@@ -55,21 +55,21 @@ Command | Effect
  **$mod + f** | enter fullscreen mode for the focused container
  **$mod + g** |
  **$mod + h** | split in horizontal orientation
- **$mod + i** |
+ **$mod + i** | put a border of 1 pixel
  **$mod + j** |
  **$mod + k** |
  **$mod + l** |
  **$mod + m** |
  **$mod + n** | start nautilus
- **$mod + o** |
+ **$mod + o** | put a normal border
  **$mod + p** |
  **$mod + q** |
  **$mod + r** | resize windows
  **$mod + s** | change container layout to stacked
  **$mod + t** | start thunderbird
- **$mod + u** |
+ **$mod + u** | none border
  **$mod + v** | split in vertical orientation
- **$mod + w** |change container layout to tabbed
+ **$mod + w** | change container layout to tabbed
  **$mod + x** | locks the screen
  **$mod + y** | start virtualbox
  **$mod + z** |
@@ -92,7 +92,7 @@ Command | Effect
  **$mod + Shift + q** | kill focused window
  **$mod + Shift + r** | restart i3 inplace (preserves your layout/session)
  **$mod + Shift + s** |
- **$mod + Shift + t** |
+ **$mod + Shift + t** | toggle sticky
  **$mod + Shift + u** |
  **$mod + Shift + v** |
  **$mod + Shift + w** |
@@ -145,12 +145,12 @@ Command | Effect
  **$mod + Shift + 8** |
  **$mod + Shift + 9** |
  **$mod + Shift + 0** |
- **$mod + Pause** | Open a menu to to logout, end session, restart or poweroff
+ **$mod + Pause** | open a menu to to logout, end session, restart or poweroff
  **$mod + Space** | change focus between tiling / floating windows
  **$mod + Shift + Space** | toggle tiling / floating
- **$mod + PrtSc** | Screenshot the focused window
- **$PrtSc** | Screenshot
- **$Shitf + PrtSc** | Screenshot a selection
+ **$mod + PrtSc** | screenshot the focused window
+ **$PrtSc** | screenshot
+ **$Shitf + PrtSc** | screenshot a selection
  **$mod + f1** |
  **$mod + f2** |
  **$mod + f3** |
