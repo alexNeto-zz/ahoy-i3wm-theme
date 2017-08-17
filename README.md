@@ -3,7 +3,14 @@
 > Initially made for personal use, but released to encourage me to keep maintaining this theme and learn more about __i3wm__.
 
 > I use these theme in the __arch linux__, but also used it in the __fedora 24__.
+## Appearance
+### The general appearance
+![how this config should look like](https://github.com/alexNeto/i3/blob/assets/generalap.png)
+### The tiling appearance
+![the tiling appearance](https://github.com/alexNeto/i3/blob/assets/tiling.png)
 
+> The wallpaper find in the google and make from sepia to black and white
+> if you want this wallpaper, it can be find here: [hussaria image](https://github.com/alexNeto/i3/blob/assets/hussaria.jpg)
 ## Dependencies
 
 ### Font-awesome
