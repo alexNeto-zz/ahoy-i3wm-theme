@@ -68,7 +68,7 @@ Command | Effect
  **$mod + g** |
  **$mod + h** | split in horizontal orientation
  **$mod + i** | put a border of 1 pixel
- **$mod + j** |
+ **$mod + j** | start eclipse IDE
  **$mod + k** |
  **$mod + l** |
  **$mod + m** |
