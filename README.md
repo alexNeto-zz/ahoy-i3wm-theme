@@ -41,7 +41,7 @@ Used for incons in the bar
     * `# apt-get install compton` for Debian GNU/Linux based
 ### GTK theme
 I'm using [vimix theme](https://github.com/vinceliuice/vimix-gtk-themes)
-Use lxappearance to tweak the theme and font 
+Use lxappearance to tweak the theme and font
    * `# pacman -S lxappareance` for Arch linux based
    * `# apt-get install lxappareance` for Debian GNU/Linux based
 
