@@ -9,8 +9,8 @@
 ### The tiling appearance
 ![the tiling appearance](https://github.com/alexNeto/i3/blob/assets/tiling.png)
 
-> The wallpaper find in the google and make from sepia to black and white
-> if you want this wallpaper, it can be find here: [hussaria image](https://github.com/alexNeto/i3/blob/assets/hussaria.jpg)
+> The wallpaper is from [mound&blade adaptation](https://www.walldevil.com/allmight-army-battles-black-horses-knight-blade-chivalry-dark-digital-art-fantasy-hussar-hussaria-knights-lance-lancer-mount-mountampblade-poland-polish-spears-warband-warriors-winged-wings-with-fire-wallpaper-8127/) and I made it from sepia to black and white
+> if you want this wallpaper, it can be found here: [hussaria image](https://github.com/alexNeto/i3/blob/assets/hussaria.jpg)
 ## Dependencies
 
 ### Font-awesome
