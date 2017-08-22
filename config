@@ -54,7 +54,7 @@ set $urgentBgColor	 		  #b70009
 # ambient config #
 ##################
 # explicity enable mouse warning
-mouse_warping output
+#mouse_warping output
 # Font for window titles
 font pango: Muli 8
 #mod4 for windows key, mod1 fot alt key
@@ -103,7 +103,9 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 # sets the background
-exec --no-startup-id feh --bg-scale ~/Imagens/Wallpapers/hussaria.jpg
+#exec --no-startup-id feh --bg-scale ~/Imagens/Wallpapers/hussaria.jpg
+# set nitrogen
+exec --no-startup-id nitrogen --restore 
 # enable transparency
 exec compton
 ################
