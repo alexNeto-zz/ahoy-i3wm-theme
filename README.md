@@ -29,11 +29,11 @@ Used for incons in the bar
  1. Install it
     * `# pacman -S i3blocks` for Arch linux based
     * `# apt-get install i3blocks` for Debian GNU/Linux based
- ### feh
+ ### nitrogen
  Used to set a wallpaper
  1. Install it
-    * `# pacman -S feh` for Arch linux based
-    * `# apt-get install feh` for Debian GNU/Linux based
+    * `# pacman -S nitrogen` for Arch linux based
+    * `# apt-get install nitrogen` for Debian GNU/Linux based
  ### compton
  Allow transparency and effects
  1. Install it
