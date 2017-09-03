@@ -16,7 +16,7 @@ fi
 
 if [ $MEM -lt 30 -o $SUFIX != "GiB" ]
 then
-	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
+	echo "<span color='#f76c5e'>   $MEM $SUFIX  </span>"
 else
 	echo "   $MEM $SUFIX  "
 fi

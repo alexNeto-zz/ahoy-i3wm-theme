@@ -20,5 +20,5 @@ if [ $MEMCOMP -lt 50 -o $SUFIX != "GiB" ]
 then
 	echo "   $MEM $SUFIX "
 else
-	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
+	echo "<span color='#f76c5e'>   $MEM $SUFIX  </span>"
 fi

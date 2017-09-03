@@ -8,19 +8,19 @@ if [ $VOLCOMP -ge 100 ]
 then
 	if [ $VOLCOMP -gt 150 ]
 	then
-		echo "<span color='#fc5050'> $VOLSHOW</span>"
+		echo "<span color='#f76c5e'> $VOLSHOW</span>"
 		amixer set Master 150%
 	fi
-	echo "<span color='#fc5050'> $VOLSHOW</span>"
+	echo "<span color='#f76c5e'> $VOLSHOW</span>"
 else
 	VOLSHOW=$(echo $VOL | cut -b1-3)
 	VOLCOMP=$(echo $VOL | cut -b1-2)
 	if [ $VOLCOMP -ge 80 ]
 	then
-		echo "<span color='#fc5050'> $VOLSHOW</span>"
+		echo "<span color='#f76c5e'> $VOLSHOW</span>"
 	elif [ $VOLCOMP -gt 60 -a $VOLCOMP -lt 80 ]
 	then
-		echo "<span color='#f7fc5d'> $VOLSHOW</span>"
+		echo "<span color='#f5dd90'> $VOLSHOW</span>"
 	elif [ $VOLCOMP -gt 0 -a $VOLCOMP -lt 61 ]
 	then
 		echo " $VOLSHOW"
