@@ -18,7 +18,7 @@ fi
 
 if [ $MEMCOMP -lt 50 -o $SUFIX != "GiB" ]
 then
-	echo "<span color='#2afc98'>   $MEM $SUFIX  </span>"
+	echo "   $MEM $SUFIX "
 else
 	echo "<span color='#fc5050'>   $MEM $SUFIX  </span>"
 fi
