@@ -113,7 +113,7 @@ exec compton
 ################
 ## I need a better key system
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec gnome-terminal
 # start firefox
 bindsym $mod+b exec firefox --private
 # start chrome

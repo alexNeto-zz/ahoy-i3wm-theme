@@ -1,0 +1,22 @@
+#!/bin/bash
+
+MEM=$( df -h | grep /dev/mapper/fedora-home | cut -b37-40)
+SUFIX=$(df -h | grep /dev/mapper/fedora-home | cut -b41)
+
+if [ $SUFIX == "G" ]
+then
+	SUFIX=GiB
+elif [ $SUFIX == "M" ]
+then
+	SUFIX=MiB
+elif [ $SUFIX == "k" ]
+then
+	SUFIX=kiB
+fi
+
+if [ $MEM -lt 30 -o $SUFIX != "GiB" ]
+then
+	echo "<span color='#f76c5e'>   $MEM $SUFIX  </span>"
+else
+	echo "   $MEM $SUFIX  "
+fi
