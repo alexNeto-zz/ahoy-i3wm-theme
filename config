@@ -16,9 +16,9 @@ exec xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" 0.75
 # link: https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
 # Pulse Audio controls
 #increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +3%
 #decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -3%
 # mute sound
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # Sreen brightness controls
@@ -35,7 +35,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 # execute a networkManager applet
-exec --no-startup-id nm-applet
+exec --no-startup-id nm
 #################
 # config colors #
 #################
@@ -117,7 +117,7 @@ bindsym $mod+Return exec gnome-terminal
 # start firefox
 bindsym $mod+b exec firefox --private
 # start chrome
-bindsym $mod+c exec chromium
+bindsym $mod+c exec chromium-browser
 # start virtualbox
 bindsym $mod+y exec virtualbox
 # start nautilus
@@ -133,7 +133,9 @@ bindsym $mod+Pause mode "$mode_system"
 # kill focused window
 bindsym $mod+Shift+q kill
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -fn "Muli 8" -nb "$bgColor" -nf "$TextColor" -sb "$inactiveBgColor" -sf "$urgentBgColor"
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop -fn "Muli 8" -nb "$bgColor" -nf "$TextColor" -sb "$inactiveBgColor" -sf "$urgentBgColor"
+# show only the desktop applications
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # alternatively use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -173,7 +175,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-navbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # resize windows
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+t sticky toggle
@@ -225,6 +227,8 @@ assign [class="Firefox"] $ws2
 #######
 bar {
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	tray_output primary
+	mode hide
   position top
 	colors {
 		background $bgColor
