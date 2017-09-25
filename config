@@ -39,11 +39,11 @@ exec --no-startup-id nm
 #################
 # config colors #
 #################
-set $bgColor 	         	  #444444
+set $bgColor 	          #444444
 set $inactiveBgColor   	  #404040
-set $textColor          	#ececec
+set $textColor         	  #ececec
 set $inactiveTextColor 	  #696969
-set $urgentBgColor	 		  #b70009
+set $urgentBgColor	  #b70009
 # window colors
 #                      	 border              	background       text                 indicator
  client.focused          $bgColor           	$bgColor         $textColor         	#a5a6a7
@@ -117,7 +117,8 @@ bindsym $mod+Return exec gnome-terminal
 # start firefox
 bindsym $mod+b exec firefox --private
 # start chrome
-bindsym $mod+c exec chromium-browser
+bindsym $mod+c exec chromium
+#bindsym $mod+c exec chromium-browser
 # start virtualbox
 bindsym $mod+y exec virtualbox
 # start nautilus
