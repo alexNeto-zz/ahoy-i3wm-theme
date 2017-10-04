@@ -2,7 +2,7 @@
 
 > Initially made for personal use, but released to encourage me to keep maintaining this theme and learn more about __i3wm__.
 
-> I use these theme in the __arch linux__, but also used it in the __fedora 24__.
+> I'm using this theme in the __arch linux__, but also used it in the __fedora 24__.
 ## Appearance
 ### The general appearance
 ![how this config should look like](https://github.com/alexNeto/i3/blob/assets/generalap.png)
