@@ -69,7 +69,7 @@ Command | Effect
  **$mod + h** | split in horizontal orientation
  **$mod + i** | put a border of 1 pixel
  **$mod + j** | start eclipse IDE
- **$mod + k** |
+ **$mod + k** | start visual studio code
  **$mod + l** |
  **$mod + m** |
  **$mod + n** | start thunar

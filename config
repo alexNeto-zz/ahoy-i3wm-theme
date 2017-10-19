@@ -71,7 +71,7 @@ bindsym button3 floating toggle
 # allow back to the previous screen
 workspace_auto_back_and_forth yes
 # set Locker to i3lock and add a imagem
-set $Locker i3lock -i ~/Imagens/Wallpapers/toc.png && sleep 1
+set $Locker i3lock -i ~/Pictures/imgs/Wallpapers/toc.png && sleep 1
 set $mode_system System  lock: l   logout: e   suspend: s   hibernate: h   reboot: r   shutdown: Shift+s
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -117,14 +117,16 @@ bindsym $mod+Return exec gnome-terminal
 # start firefox
 bindsym $mod+b exec firefox --private
 # start chrome
-bindsym $mod+c exec chromium
-#bindsym $mod+c exec chromium-browser
+#bindsym $mod+c exec chromium
+bindsym $mod+c exec chromium-browser
 # start virtualbox
 bindsym $mod+y exec virtualbox
 # start nautilus
 bindsym $mod+n exec nautilus
 # start eclipse
 bindsym $mod+j exec eclipse
+# start visual studio code
+bindsym $mod+k exec code
 # start thunderbird
 bindsym $mod+t exec thunderbird
 # set the shutcut to i3lock 'screensaver'
