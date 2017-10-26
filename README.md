@@ -24,6 +24,11 @@ Used for incons in the bar
  Main font of the system, you can change to any other font
  1. Download the [Muli](https://fonts.google.com/specimen/Muli)
  2. Do the same as you did with font-awesome
+ ### scrot
+ Used to take printscreen
+ 1. Install it
+   * `# pacman -S scrot` for Arch linux based
+   * `# apt-get install scrot` for Debian GNU/Linux based
  ### i3blocks
  Used instead of i3bar
  1. Install it
