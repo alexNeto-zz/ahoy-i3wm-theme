@@ -39,10 +39,10 @@ exec --no-startup-id nm
 #################
 # config colors #
 #################
-set $bgColor 	          #444444
-set $inactiveBgColor   	  #404040
+set $bgColor 	          #1d1c1a
+set $inactiveBgColor   	  #1d1c1a
 set $textColor         	  #ececec
-set $inactiveTextColor 	  #696969
+set $inactiveTextColor 	  #6f6e67
 set $urgentBgColor	  #b70009
 # window colors
 #                      	 border              	background       text                 indicator
@@ -183,9 +183,9 @@ bindsym $mod+Shift+e exec "i3-navbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+t sticky toggle
 #Screenshots
-bindsym Print exec scrot -m "$HOME/Imagens/%s_%H%M_%d.%m.%Y.png"
-bindsym Shift+Print exec scrot -s "$HOME/Imagens/%s_%H%M_%d%m%Y.png"
-bindsym $mod+Shift+Print exec scrot -u -d 4 "$HOME/Imagens/%s_%H%M_%d%m%Y.png"
+bindsym Print exec scrot -m "$HOME/Pictures/%s_%H%M_%d.%m.%Y.png"
+bindsym Shift+Print exec scrot -s "$HOME/Pictures/%s_%H%M_%d%m%Y.png"
+bindsym $mod+Shift+Print exec scrot -u -d 4 "$HOME/Pictures/%s_%H%M_%d%m%Y.png"
 ##############
 # workspaces #
 ##############
