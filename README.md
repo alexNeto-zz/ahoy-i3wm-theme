@@ -1,4 +1,4 @@
-# My i3wm desktop config
+# Ahoy i3wm Theme
 
 > Initially made for personal use, but released to encourage me to keep maintaining this theme and learn more about __i3wm__.
 
